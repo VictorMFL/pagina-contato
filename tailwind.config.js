@@ -5,7 +5,13 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'roxo-escuro': '#16151E',
+        "roxo-claro": '#24243D',
+        "cor-texto": '#E1E1E6'
+      }
+    },
   },
   plugins: [],
 }
