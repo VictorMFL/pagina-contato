@@ -2,7 +2,6 @@ import React from "react";
 
 import { BsSearch } from "react-icons/bs";
 import { AiOutlinePlus } from "react-icons/ai";
-import { MdEdit, MdDelete } from "react-icons/md";
 
 import CriarCard from "./CriarCard/CriarCard";
 
@@ -24,15 +23,11 @@ const Header = ({ person, setPerson }: HeaderProps) => {
     <header className=" h-52 p-10 text-cor-texto bg-roxo-escuro flex flex-col justify-center items-center">
       <nav className="w-2/3 flex items-center justify-between mb-8">
         <h2 className="text-2xl">Meus contatos</h2>
-        <div className="flex items-center justify-between gap-4">
-          <AiOutlinePlus
-            size={24}
-            className="cursor-pointer"
-            onClick={criarCard}
-          />
-          <MdEdit size={24} className="cursor-pointer" />
-          <MdDelete size={24} className="cursor-pointer" />
-        </div>
+        <AiOutlinePlus
+          size={24}
+          className="cursor-pointer"
+          onClick={criarCard}
+        />
       </nav>
       <form className="w-2/3 relative">
         <input
@@ -48,7 +43,13 @@ const Header = ({ person, setPerson }: HeaderProps) => {
         </button>
       </form>
 
-      {criarContato && <CriarCard person={person} setPerson={setPerson} setCriarContato={setCriarContato} />}
+      {criarContato && (
+        <CriarCard
+          person={person}
+          setPerson={setPerson}
+          setCriarContato={setCriarContato}
+        />
+      )}
     </header>
   );
 };

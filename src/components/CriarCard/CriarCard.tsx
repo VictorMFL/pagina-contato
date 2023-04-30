@@ -112,7 +112,7 @@ const CriarCard = ({ person, setPerson, setCriarContato }: CriarCardProps) => {
             onChange={handleChangeNumber}
             onBlur={handleBlur}
           />
-          {error && error}
+          {error && <p className="text-red-500">{error}</p>}
         </div>
 
         <button
