@@ -1,11 +1,21 @@
 import React from 'react'
 
 import Header from './components/Header'
+import Main from './components/Main'
+
+export type PeapleProps = {
+  name: string;
+  number: string;
+  id: number;
+}
 
 const App = () => {
+  const [person, setPerson] = React.useState<Array<PeapleProps>>([{name: 'Exemplo', number: '21 99999-9999', id: 1}])
+
   return (
     <div className='bg-black text-white'>
-      <Header />
+      <Header  />
+      <Main person={person} />
     </div>
   )
 }
