@@ -3,13 +3,21 @@ import React from "react";
 import { BsSearch } from "react-icons/bs";
 import { AiOutlinePlus } from "react-icons/ai";
 import { MdEdit, MdDelete } from "react-icons/md";
+
 import CriarCard from "./CriarCard/CriarCard";
 
-const Header = () => {
-  const [criarContato, setCriarContato] = React.useState(false) 
+import { PeapleProps } from "../App";
+
+type HeaderProps = {
+  person: PeapleProps[];
+  setPerson: React.Dispatch<React.SetStateAction<PeapleProps[]>>;
+};
+
+const Header = ({ person, setPerson }: HeaderProps) => {
+  const [criarContato, setCriarContato] = React.useState(false);
 
   function criarCard() {
-    setCriarContato(!criarContato)
+    setCriarContato(!criarContato);
   }
 
   return (
@@ -17,7 +25,11 @@ const Header = () => {
       <nav className="w-2/3 flex items-center justify-between mb-8">
         <h2 className="text-2xl">Meus contatos</h2>
         <div className="flex items-center justify-between gap-4">
-          <AiOutlinePlus size={24} className="cursor-pointer" onClick={criarCard} />
+          <AiOutlinePlus
+            size={24}
+            className="cursor-pointer"
+            onClick={criarCard}
+          />
           <MdEdit size={24} className="cursor-pointer" />
           <MdDelete size={24} className="cursor-pointer" />
         </div>
@@ -36,7 +48,7 @@ const Header = () => {
         </button>
       </form>
 
-      {criarContato && <CriarCard />}
+      {criarContato && <CriarCard person={person} setPerson={setPerson} setCriarContato={setCriarContato} />}
     </header>
   );
 };
