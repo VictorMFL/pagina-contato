@@ -103,7 +103,7 @@ const CriarCard = ({ person, setPerson, setCriarContato }: CriarCardProps) => {
         <div className="flex flex-col items-baselne justify-center mb-4">
           <label htmlFor="numero">Número</label>
           <input
-            type="text"
+            type="number"
             id="numero"
             value={number}
             autoComplete="off"
