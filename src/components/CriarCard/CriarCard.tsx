@@ -15,6 +15,12 @@ const CriarCard = ({ person, setPerson, setCriarContato }: CriarCardProps) => {
   const [number, setNumber] = React.useState("");
   const [error, setError] = React.useState<string | null>(null);
 
+  const inputRef = React.useRef<HTMLInputElement>(null)
+
+  React.useEffect(() => {
+    inputRef.current?.focus()
+  }, [])
+
   function validateNumber(value: string) {
     if (value.length === 0) {
       setError("Preencha um valor");
@@ -99,6 +105,7 @@ const CriarCard = ({ person, setPerson, setCriarContato }: CriarCardProps) => {
             required
             className="bg-slate-600 rounded-lg p-2 mt-1 outline-none border-none focus:outline-slate-700"
             onChange={handleChangeName}
+            ref={inputRef}
           />
         </div>
 
