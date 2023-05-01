@@ -19,7 +19,7 @@ const CriarCard = ({ person, setPerson, setCriarContato }: CriarCardProps) => {
     if (value.length === 0) {
       setError("Preencha um valor");
       return false;
-    } else {
+    }else {
       setError(null);
       return true;
     }
@@ -63,7 +63,9 @@ const CriarCard = ({ person, setPerson, setCriarContato }: CriarCardProps) => {
 
     if (number.length < 10) {
       setError("Adicione o ddd ou tem algum número faltando");
-    } else {
+    }else if(number.length > 11){
+      setError('Muitos números. não é necessário colocar o +55.')
+    }else {
       const numberFormated = formatPhoneNumber(number);
       const newContact = {
         id: Math.floor(Math.random() * 10000),

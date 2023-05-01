@@ -7,6 +7,7 @@ export default {
         "roxo-escuro": "#16151E",
         "roxo-claro": "#24243D",
         "cor-texto": "#E1E1E6",
+        "roxo-opaco": "rgba(36, 36, 61, 0.9)"
       },
     },
   },
