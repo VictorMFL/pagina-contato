@@ -59,7 +59,7 @@ const Header = ({ person, setPerson }: HeaderProps) => {
           value={pesquisa}
           ref={inputRef}
         />
-        <div className="absolute top-16 bg-roxo-escuro rounded-lg z-30 py-4 w-full text-center">
+        <div className="absolute top-16 bg-roxo-escuro rounded-lg z-30 w-full text-center">
           {pesquisa != "" &&
             filteredData.map((item) => {
               return (
