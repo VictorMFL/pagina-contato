@@ -25,6 +25,7 @@ const Editar = ({ person, setPerson, setEditar }: PersonProps) => {
     }
   }
 
+  // Mensagem de Erro.
   function handleBlur(event: React.ChangeEvent<HTMLInputElement>) {
     validateNumber(event.target.value);
   }
