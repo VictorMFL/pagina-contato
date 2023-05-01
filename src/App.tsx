@@ -15,7 +15,7 @@ const App = () => {
   return (
     <div className='bg-black text-white'>
       <Header person={person} setPerson={setPerson} />
-      <Main person={person} />
+      <Main person={person} setPerson={setPerson} />
     </div>
   )
 }
