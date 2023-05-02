@@ -25,9 +25,14 @@ const Main = ({ person, setPerson }: PersonProps) => {
     setEditar(!editar)
   }
 
+  // Deixando os dados do person em ordem alfabética
+  const ordenanadoPerson = [...person].sort((a, b) =>
+    a.name.localeCompare(b.name)
+  );
+
   return (
     <main className="bg-roxo-claro p-8 flex justify-center items-center flex-col">
-      {person.map((item) => (
+      {ordenanadoPerson.map((item) => (
         <div
           className="flex items-center justify-center mb-8 relative cards-pessoa z-10"
           key={item.id}
