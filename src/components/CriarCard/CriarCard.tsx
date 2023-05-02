@@ -75,7 +75,7 @@ const CriarCard = ({ person, setPerson, setCriarContato }: CriarCardProps) => {
       const numberFormated = formatPhoneNumber(number);
       const newContact = {
         id: Math.floor(Math.random() * 10000),
-        name: name,
+        name: name.charAt(0).toUpperCase() + name.slice(1),
         number: numberFormated,
       };
       setPerson([...person, newContact]);
