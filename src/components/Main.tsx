@@ -46,10 +46,11 @@ const Main = ({ person, setPerson }: PersonProps) => {
     <main className="bg-roxo-claro p-8 flex justify-center items-center flex-col">
       {ordenanadoPerson.map((item) => (
         <div
-          className="w-1/3 flex items-center mb-8 relative cards-pessoa z-10"
+          className="w-1/3 flex items-center mb-8 relative cards-pessoa z-10 sm:w-1/2 cel:w-full cel:justify-center
+           "
           key={item.id}
         >
-          <p className="w-20 h-20 rounded-full bg-slate-400 flex items-center justify-center mr-8">
+          <p className="w-20 h-20 rounded-full bg-slate-400 flex items-center justify-center mr-8 cel:w-16 cel:h-16">
             img
           </p>
           <div>
@@ -112,13 +113,13 @@ const Main = ({ person, setPerson }: PersonProps) => {
                         ? "#301c41"
                         : "#1d0c20",
                   }}
-                  className="w-10 h-10 text-cor-texto rounded-lg flex items-center justify-center absolute -left-32"
+                  className="w-10 h-10 text-cor-texto rounded-lg flex items-center justify-center absolute -left-32 cel:-left-6 cel:text-sm cel:w-8 cel:h-8"
                 >
                   {firstLetter(item.name)}
                 </span>
               )}
-              <p className="font-bold">{item.name}</p>
-              <p className="font-light">{item.number}</p>
+              <p className="font-bold cel:text-sm">{item.name}</p>
+              <p className="font-light cel:text-sm">{item.number}</p>
             </div>
           </div>
           <div className="absolute right-0 customizar">

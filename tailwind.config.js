@@ -9,6 +9,9 @@ export default {
         "cor-texto": "#E1E1E6",
         "roxo-opaco": "rgba(36, 36, 61, 0.9)"
       },
+      screens: {
+        'cel': {'max': '640px'}
+      }
     },
   },
   plugins: [],

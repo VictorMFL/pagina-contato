@@ -86,7 +86,7 @@ const CriarCard = ({ person, setPerson, setCriarContato }: CriarCardProps) => {
   return (
     <div className="w-full h-screen flex items-center justify-center bg-roxo-claro absolute bottom-0 z-20">
       <form
-        className="w-2/4 p-8 flex flex-col justify-center text-white relative"
+        className="w-2/4 p-8 flex flex-col justify-center text-white relative cel:w-full"
         onSubmit={handleSubmit}
       >
         <MdClose

@@ -101,7 +101,7 @@ const Editar = ({ person, setPerson, setEditar }: PersonProps) => {
     <div className="w-full h-screen flex items-center justify-center bg-roxo-opaco absolute bottom-0 z-20">
       <form
         onSubmit={handleSubmit}
-        className="w-2/4 p-8 flex flex-col justify-center text-white relative"
+        className="w-2/4 p-8 flex flex-col justify-center text-white relative cel:w-full"
       >
         <MdClose
           className="cursor-pointer absolute right-8 -top-4 "

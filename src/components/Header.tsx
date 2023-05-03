@@ -39,7 +39,7 @@ const Header = ({ person, setPerson }: HeaderProps) => {
 
   return (
     <header className=" h-52 p-10 text-cor-texto bg-roxo-escuro flex flex-col justify-center items-center">
-      <nav className="w-2/3 flex items-center justify-between mb-8">
+      <nav className="w-2/3 flex items-center justify-between mb-8 cel:w-full">
         <h2 className="text-2xl">Meus contatos</h2>
         <AiOutlinePlus
           size={24}
@@ -47,7 +47,7 @@ const Header = ({ person, setPerson }: HeaderProps) => {
           onClick={criarCard}
         />
       </nav>
-      <form className="w-2/3 relative">
+      <form className="w-2/3 relative cel:w-full">
         <input
           type="text"
           name="pesquisa"
